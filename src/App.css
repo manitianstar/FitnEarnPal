@@ -1,0 +1,1077 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #171717;
+}
+.container {
+  background-color: #171717;
+}
+.navbar {
+  width: 1280px; /* Fixed width */
+  height: 74px; /* Fixed height */
+  padding: 13px 72px; /* Padding for the navbar */
+  display: flex;
+  justify-content: space-between; /* Space between logo and menu items */
+  align-items: center; /* Vertically center the content */
+  gap: 0px; /* No gap between elements */
+  opacity: 1; /* Ensure visibility (opacity was given as 0, so it might need to be adjusted) */
+
+  /* Background gradient and blur */
+  background: linear-gradient(
+    157.48deg,
+    rgba(77, 77, 77, 0.045) 0%,
+    rgba(140, 140, 140, 0.04) 99.6%
+  );
+  background-color: #4d4d4d;
+  backdrop-filter: blur(100px); /* Applies the blur effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /* overflow: auto; */
+}
+.logo {
+  width: 265px;
+  height: 48px;
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center vertically */
+  gap: 12px; /* Space between elements inside the logo */
+  opacity: 1; /* Set to visible (opacity 0 was provided, adjusted to 1 for visibility) */
+  background-color: #4d4d4d;
+  cursor: pointer;
+}
+#logo_name {
+  /* Layout */
+  width: 205px; /* Fixed width */
+  height: 48px; /* Fixed height */
+  gap: 0px; /* No spacing between elements */
+  opacity: 1; /* Set to visible (adjusted from 0 to 1) */
+
+  /* Typography */
+  font-family: "Lato", sans-serif; /* Font family */
+  font-size: 40px; /* Font size */
+  font-weight: 400; /* Font weight (bold) */
+  line-height: 48px; /* Line height to match height */
+  text-align: left; /* Align text to the left */
+  text-underline-position: from-font; /* Use underline position as defined by the font */
+  text-decoration-skip-ink: none; /* Ensures underlines do not skip over inked parts of text */
+
+  /* Background Gradient */
+  background: linear-gradient(116.79deg, #db2777 -10.97%, #f97316 114.58%);
+  -webkit-background-clip: text; /* Makes the gradient apply to text only */
+  -webkit-text-fill-color: transparent; /* Makes the background gradient visible by making the text fill transparent */
+}
+#logo_img {
+  width: 48px; /* Fixed width */
+  height: 48px; /* Fixed height */
+  gap: 0px; /* No spacing (if relevant to layout) */
+  opacity: 1; /* Adjusted to visible (from 0 to 1) */
+
+  /* Background color: Primary color placeholder */
+  background-color: var(
+    --primary-color
+  ); /* Use a CSS variable for Primary Color */
+  border-radius: 50%; /* Optional: Makes it circular if it’s a logo/icon */
+  display: flex; /* Useful for centering content inside, if needed */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+}
+.menu {
+  display: flex; /* Use flexbox to layout the menu items */
+  align-items: center; /* Vertically align menu items */
+  justify-content: flex-start; /* Align items to the left */
+  width: auto; /* Hug the content dynamically */
+  height: auto; /* Hug the content dynamically */
+  gap: 24px; /* Space between menu items */
+  opacity: 1; /* Set to visible */
+  background-color: #4d4d4d;
+}
+
+.menu a {
+  text-decoration: none; /* Remove underline */
+  background-color: #4d4d4d;
+  color: white; /* Set font color to white */
+  font-size: 16px; /* Set font size */
+  font-family: "Lato", sans-serif; /* Optional: Set font family */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.menu a:hover {
+  color: #ff4500; /* Highlight color on hover */
+}
+
+.sign-up {
+  /* Dimensions */
+  width: 192px; /* Fixed width */
+  height: 48px; /* Fixed height */
+  padding: 0; /* Remove padding for uniformity */
+  gap: 4px; /* Space between internal elements (if any) */
+
+  /* Border */
+  border-radius: 24px; /* Half of the height for a fully rounded, pill-shaped button */
+  border: 1.5px solid; /* Solid border width */
+  border-color: transparent; /* Start with no visible border */
+  background: linear-gradient(#4d4d4d, #4d4d4d) padding-box,
+    linear-gradient(126.89deg, #db2777 -67.19%, #f97316 203.32%) border-box;
+
+  /* Text Styling */
+  color: white; /* Text color */
+  font-size: 16px; /* Font size */
+  font-family: "Lato", sans-serif; /* Font family */
+  font-weight: bold; /* Bold text for emphasis */
+  line-height: 48px; /* Vertically center the text */
+  text-align: center; /* Align text horizontally */
+  text-decoration: none; /* Remove underline */
+
+  /* Button Behavior */
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+  opacity: 1; /* Ensure button is visible */
+
+  /* Transition for smooth effects */
+  transition: all 0.3s ease-in-out;
+  background-color: #4d4d4d;
+}
+
+.sign-up:hover {
+  background: linear-gradient(126.89deg, #db2777 -67.19%, #f97316 203.32%);
+  color: white; /* Keep text white on hover */
+}
+.signup-button {
+  background-color: transparent;
+  /* height: 27px;
+  width: 108px;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif; Font family */
+  color: azure;
+}
+.signup-button:hover {
+  background: linear-gradient(126.89deg, #db2777 -67.19%, #f97316 203.32%);
+  color: azure;
+}
+.text {
+  width: 560px; /* Fixed width */
+  height: auto; /* Hug the content vertically */
+  position: absolute; /* To position relative to its parent */
+  top: 250px; /* Distance from the top of the parent element */
+  left: 72px; /* Distance from the left of the parent element */
+  gap: 40px; /* Space between child elements inside the container */
+  opacity: 1; /* Set to visible (adjusted from 0 to 1 for visibility) */
+
+  display: flex; /* Enables flexbox for internal layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: flex-start; /* Align children to the left */
+  justify-content: flex-start; /* Align content at the start */
+  color: white; /* Text color */
+  font-family: "Lato", sans-serif; /* Font family */
+  animation: fadeIn 1.5s ease-in-out, slideInFromLeft 1.5s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animation for sliding in from the left */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.heading {
+  width: 675px;
+  height: auto; /* Hug content vertically */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Stack children vertically */
+  gap: 20px; /* Space between elements inside */
+  opacity: 1; /* Ensure visibility (adjusted from 0 to 1) */
+
+  color: white; /* Set text color */
+  font-family: "Lato", sans-serif; /* Set font family */
+  font-size: 48px; /* Example font size, adjust as needed */
+  font-weight: bold; /* Bold text for emphasis */
+  line-height: 62px; /* Match the height for proper spacing */
+  text-align: left; /* Align text to the left */
+}
+#emogi {
+  width: 56px; /* Fixed width */
+  height: 56px; /* Fixed height */
+  gap: 0px; /* No spacing (not applicable to images directly) */
+  opacity: 1; /* Ensure visibility (adjusted from 0 to 1) */
+
+  display: block; /* Default display for images */
+  object-fit: contain; /* Ensures the image maintains its aspect ratio */
+}
+#awesome {
+  /* Dimensions */
+  width: 599px; /* Fixed width */
+  height: 62px; /* Fixed height */
+  gap: 0px; /* No spacing (not directly applicable for a span) */
+  opacity: 1; /* Ensure visibility (adjusted from 0 to 1) */
+
+  /* Typography */
+  font-family: "Lato", sans-serif; /* Set font family */
+  font-size: 52px; /* Font size */
+  font-style: italic; /* Italicize the text */
+  font-weight: 800; /* Extra bold weight */
+  line-height: 62.4px; /* Line height to match height */
+  text-align: left; /* Align text to the left */
+  text-underline-position: from-font; /* Use underline position defined by the font */
+  text-decoration-skip-ink: none; /* Avoid skipping ink in text decorations */
+
+  /* Background */
+  background: var(
+    --Neutral-100,
+    #f5f5f5
+  ); /* Light background color (Neutral-100) */
+  -webkit-background-clip: text; /* Clips background to the text */
+  -webkit-text-fill-color: transparent; /* Makes the background visible inside text */
+}
+.subheading {
+  /* Dimensions */
+  width: 526px; /* Fixed width */
+  height: 76px; /* Fixed height */
+  gap: 0px; /* No spacing between elements */
+  opacity: 1; /* Set to visible (adjusted from 0 to 1) */
+
+  /* Typography */
+  font-family: "Lato", sans-serif; /* Set font family */
+  font-size: 32px; /* Font size */
+  font-weight: 600; /* Semi-bold font weight */
+  line-height: 38.4px; /* Line height for proper spacing */
+  text-align: left; /* Align text to the left */
+  text-underline-position: from-font; /* Use underline position as defined by the font */
+  text-decoration-skip-ink: none; /* Avoid skipping ink in text decorations */
+}
+.highlight {
+  color: #da5f09;
+}
+.text {
+  width: 675px;
+  height: 178px;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.description {
+  /* Dimensions */
+  width: 561px; /* Fixed width */
+  height: 58px; /* Fixed height */
+  gap: 0px; /* No spacing between elements */
+  opacity: 1; /* Set to visible (adjusted from 0 to 1) */
+
+  /* Typography */
+  font-family: "Lato", sans-serif; /* Font family */
+  font-size: 24px; /* Font size */
+  font-weight: 500; /* Medium font weight */
+  line-height: 28.8px; /* Line height for proper spacing */
+  text-align: left; /* Align text to the left */
+  text-underline-position: from-font; /* Use underline position as defined by the font */
+  text-decoration-skip-ink: none; /* Avoid skipping ink in text decorations */
+
+  /* Background */
+  /* background: var(--Neutral-300, #D4D4D4); Light grey background */
+}
+.buttons {
+  /* Dimensions */
+  width: auto; /* Auto width based on content */
+  height: auto; /* Auto height based on content */
+  gap: 32px; /* Space between button elements */
+  display: flex;
+  gap: 32px;
+  opacity: 1; /* Set to visible (adjusted from 0 to 1) */
+}
+
+.iphone {
+  /* Dimensions */
+  width: 370px; /* Set the width */
+  height: 640px; /* Set the height */
+
+  /* Positioning */
+  position: absolute; /* Use absolute positioning */
+  top: 138px; /* Set the top offset */
+  left: 770px; /* Set the left offset */
+
+  /* Spacing */
+  gap: 0px; /* No gap */
+
+  /* Visibility */
+  opacity: 1; /* Set to visible (adjusted from 0 to 1 for visibility) */
+  background: transparent;
+}
+.ellipse {
+  /* Dimensions */
+  width: 400px; /* Set the width */
+  height: 400px; /* Set the height */
+
+  /* Positioning */
+  position: absolute; /* Use absolute positioning */
+  top: 230px; /* Set the top offset */
+  left: 715px; /* Set the left offset */
+
+  /* Spacing */
+  gap: 0px; /* No gap */
+
+  /* Visibility */
+  opacity: 1; /* Adjusted from 0 to 1 for visibility */
+
+  /* Background */
+  background: linear-gradient(
+    126.89deg,
+    rgba(219, 39, 119, 0.12) -67.19%,
+    rgba(249, 115, 22, 0.12) 203.32%
+  );
+
+  /* Shape */
+  border-radius: 50%; /* Makes the element circular */
+}
+#elipse {
+  /* Dimensions */
+  width: 300px; /* Set the width */
+  height: 300px; /* Set the height */
+
+  /* Positioning */
+  position: absolute; /* Use absolute positioning */
+  top: 280px; /* Set the top offset */
+  left: 765px; /* Set the left offset */
+
+  /* Spacing */
+  gap: 0px; /* No gap */
+
+  /* Visibility */
+  opacity: 1; /* Adjusted from 0 to 1 for visibility */
+
+  /* Background */
+  background: linear-gradient(
+    126.89deg,
+    rgba(219, 39, 119, 0.12) -67.19%,
+    rgba(249, 115, 22, 0.12) 203.32%
+  );
+
+  /* Shape */
+  border-radius: 50%; /* Makes the element circular */
+}
+.circle4 {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%; /* Makes it a perfect circle */
+  position: absolute; /* Allows positioning using top and left */
+  top: 192px; /* Position from the top */
+  left: 774px; /* Position from the left */
+  gap: 0px; /* Space between child elements (useful if flexbox/grid is applied) */
+  opacity: 0; /* Makes the circle invisible */
+  background-color: #000; /* Add a background color (optional) */
+}
+.circle1 {
+  /* Dimensions */
+  width: 58px; /* Set the width */
+  height: 58px; /* Set the height */
+
+  /* Positioning */
+  position: absolute; /* Use absolute positioning */
+  top: 300px; /* Set the top offset */
+  left: 1000px; /* Set the left offset */
+  background: transparent;
+  /* Spacing */
+  gap: 0px; /* No gap */
+
+  /* Visibility */
+  opacity: 1; /* Adjusted from 0 to 1 for visibility */
+
+  /* Shape */
+  border-radius: 50%; /* Makes the element circular */
+
+  /* Optional Background (Add if needed) */
+  /* background-color: var(--primary-color, #ddd); Placeholder color */
+}
+.circle2 {
+  /* Dimensions */
+  width: 58px; /* Set the width */
+  height: 58px; /* Set the height */
+
+  /* Positioning */
+  position: absolute; /* Use absolute positioning */
+  top: 493px; /* Set the top offset */
+  left: 774px; /* Set the left offset */
+
+  /* Spacing */
+  gap: 0px; /* No gap */
+
+  /* Visibility */
+  opacity: 1; /* Adjusted from 0 to 1 for visibility */
+
+  /* Shape */
+  border-radius: 50%; /* Makes the element circular */
+  background: transparent;
+  /* Optional Background (Add if needed) */
+  /* background-color: var(--primary-color, #ddd); Placeholder color */
+}
+.circle3 {
+  /* Dimensions */
+  width: 58px; /* Set the width */
+  height: 58px; /* Set the height */
+
+  /* Positioning */
+  position: absolute; /* Use absolute positioning */
+  top: 580px; /* Set the top offset */
+  left: 1000px; /* Set the left offset */
+
+  /* Spacing */
+  gap: 0px; /* No gap */
+
+  /* Visibility */
+  opacity: 1; /* Adjusted from 0 to 1 for visibility */
+
+  /* Shape */
+  border-radius: 50%; /* Makes the element circular */
+  background: transparent;
+  /* Optional Background (Add if needed) */
+  /* background-color: var(--primary-color, #ddd); Placeholder color */
+}
+.circle {
+  /* Dimensions */
+  width: 58px; /* Set the width */
+  height: 58px; /* Set the height */
+
+  /* Positioning */
+  position: absolute; /* Use absolute positioning */
+  top: 240px; /* Set the top offset */
+  left: 780px; /* Set the left offset */
+
+  /* Spacing */
+  gap: 0px; /* No gap */
+
+  /* Visibility */
+  opacity: 1; /* Adjusted from 0 to 1 for visibility */
+
+  /* Shape */
+  border-radius: 50%; /* Makes the element circular */
+  background: transparent;
+  /* Optional Background (Add if needed) */
+  /* background-color: var(--primary-color, #ddd); Placeholder color */
+}
+.features:hover .iphone {
+  animation: scaleUp 0.5s ease-in-out forwards;
+}
+
+.features:hover .ellipse,
+.features:hover #elipse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.features:hover .circle1,
+.features:hover .circle2,
+.features:hover .circle3,
+.features:hover .circle {
+  animation: rotateAndScale 1s ease-in-out infinite;
+}
+
+/* Animations */
+
+/* Scale up effect for the iPhone */
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Pulsing effect for ellipses */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Rotating and scaling effect for circles */
+@keyframes rotateAndScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Optional: Hover effect for individual circles */
+.circle1:hover,
+.circle2:hover,
+.circle3:hover,
+.circle:hover {
+  animation: bounce 0.5s ease-in-out;
+}
+
+/* Bounce effect */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+.container-content {
+  position: absolute;
+  top: 665px;
+  /* left: 100px; */
+  width: 100%;
+  height: 306px;
+  gap: 16px;
+  opacity: 0.5;
+  transform: translateY(50px);
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+.content-heading {
+  margin-left: 100px;
+}
+.cont {
+  width: 1050px; /* Fixed width */
+  height: 62px; /* Fixed height */
+  gap: 0px; /* No spacing between elements inside (if applicable) */
+  /* opacity: 0; Fully transparent */
+  justify-content: center;
+  font-family: "Lato", sans-serif; /* Font family */
+  font-size: 45px; /* Font size */
+  font-weight: 700; /* Bold text */
+  line-height: 62.4px; /* Line height */
+  text-align: center; /* Centered text alignment */
+  text-underline-position: from-font; /* Underline position from font */
+  text-decoration-skip-ink: none; /* No skipping ink for text decoration */
+  color: white;
+  margin-left: 90px;
+  margin-top: 50px;
+  /* background: var(--Neutral-100, #F5F5F5);  */
+}
+
+.content {
+  /* background-color: red; */
+  width: 100%;
+}
+.container-desc {
+  font-size: 22px;
+  color: #d4d4d4;
+  width: 1000px;
+  margin-left: 130px;
+  opacity: 0.5;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease-in-out 0.6s forwards;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.join {
+  position: absolute;
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 550px;
+  background: transparent;
+  /* background-color: red; */
+  height: 20px;
+}
+.join-now-button {
+  color: var(--Primary, white); /* Use the primary color or default to white */
+  font-size: var(--xxl, 18px); /* XXL size or default to 18px */
+  width: 192px; /* Fixed width */
+  height: 48px; /* Fixed height */
+  padding: var(--2, 8px) var(--3, 16px); /* Padding using CSS variables or defaults */
+  gap: 4px; /* Gap between elements inside the button */
+  border-radius: var(--rounded-lg, 8px); /* Large rounded corners or default */
+
+  background: linear-gradient(
+    126.89deg,
+    #db2777 -67.19%,
+    #f97316 203.32%
+  ); /* Gradient background */
+  border: none; /* No outline */
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Center text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth animations */
+  /* margin-top: 200px; */
+}
+
+.join-now-button:hover {
+  transform: scale(1.05); /* Slight enlargement on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Shadow effect on hover */
+  opacity: 1; /* Fully visible on hover */
+}
+
+.join-now-button:active {
+  transform: scale(1); /* Return to original size on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.join-now-button span {
+  display: inline-block;
+  font-weight: 500;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  line-height: 1;
+}
+/* Container for images */
+.images {
+  display: flex;
+  flex-wrap: wrap; /* Allows images to wrap to the next line */
+  gap: 16px; /* Space between images */
+  position: relative; /* Ensures child `.yoga` elements are positioned relative to this container */
+  margin-top: 1050px;
+  margin-left: 130px;
+}
+
+/* Individual image styles */
+.yoga {
+  width: 306px; /* Fixed width */
+  height: 416px; /* Fixed height */
+  border-radius: 16px 0 0 0; /* Rounded corners on the top-left */
+  background: var(--Neutral-800, #262626); /* Dark background */
+  object-fit: cover; /* Ensures the image scales correctly */
+  display: block; /* Ensures proper layout */
+
+  /* Black-and-white effect */
+  filter: grayscale(100%); /* Convert image to grayscale */
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover */
+  opacity: 1;
+}
+
+/* Hover effect for individual images */
+.yoga:hover {
+  filter: grayscale(0%); /* Remove grayscale to show the image in color */
+  transform: scale(1.05); /* Slight zoom effect for a better visual impact */
+}
+
+.coach {
+  height: 154px;
+  width: 700px;
+  margin-left: 270px;
+  gap: 40px;
+  opacity: 0; /* Start invisible */
+  animation: fadeInSlideUp 1.5s ease-in-out forwards; /* Fade and slide effect */
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0; /* Fully transparent */
+    transform: translateY(30px); /* Slide up from 30px below */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Position at original spot */
+  }
+}
+
+#heading {
+  text-align: center;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif; /* Font family */
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 62.4px;
+  color: #d4d4d4;
+
+  animation: popIn 1.2s ease-in-out forwards; /* Individual animation for the heading */
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0; /* Fully transparent */
+    transform: scale(0.8); /* Slightly smaller */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Original size */
+  }
+}
+
+#coach {
+  color: #d4d4d4;
+  font-family: "Lato", sans-serif; /* Font family */
+  margin-left: 20px;
+  font-weight: 600px;
+  font-size: 24px;
+
+  animation: fadeInSlideLeft 1.5s ease-in-out forwards; /* Slide in from left effect */
+}
+
+@keyframes fadeInSlideLeft {
+  0% {
+    opacity: 0; /* Fully transparent */
+    transform: translateX(-30px); /* Slide in from 30px left */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Position at original spot */
+  }
+}
+
+
+.iphone1 {
+  height: 600px;
+  width: 293.8;
+  margin-left: 492px;
+  background: transparent;
+  position: relative;
+  opacity: 1;
+  z-index: 2;
+}
+.ellipse1 {
+  /* Dimensions */
+  width: 400px; /* Set the width */
+  height: 400px; /* Set the height */
+
+  /* Positioning */
+  position: absolute; /* Use absolute positioning */
+  top: 2170px; /* Set the top offset */
+  left: 435px; /* Set the left offset */
+
+  /* Spacing */
+  gap: 0px; /* No gap */
+
+  /* Visibility */
+  opacity: 1; /* Adjusted from 0 to 1 for visibility */
+
+  /* Background */
+  background: linear-gradient(
+    126.89deg,
+    rgba(219, 39, 119, 0.12) -67.19%,
+    rgba(249, 115, 22, 0.12) 203.32%
+  );
+  /* background: transparent; */
+  /* Shape */
+  border-radius: 50%; /* Makes the element circular */
+  z-index: 1;
+}
+#elipse1 {
+  /* Dimensions */
+  width: 300px; /* Set the width */
+  height: 300px; /* Set the height */
+
+  /* Positioning */
+  position: absolute; /* Use absolute positioning */
+  top: 2220px; /* Set the top offset */
+  left: 483px; /* Set the left offset */
+
+  /* Spacing */
+  gap: 0px; /* No gap */
+
+  /* Visibility */
+  opacity: 1; /* Adjusted from 0 to 1 for visibility */
+
+  /* Background */
+  background: linear-gradient(
+    126.89deg,
+    rgba(219, 39, 119, 0.12) -67.19%,
+    rgba(249, 115, 22, 0.12) 203.32%
+  );
+
+  /* Shape */
+  border-radius: 50%; /* Makes the element circular */
+}
+/* p{
+  margin-top: 2170px;
+} */
+ .image_features{
+  display: flex;
+
+ }
+.personal_brand{
+  margin-top:90px;
+  height: 151px;
+  width: 300px;
+ }
+ .circle4{
+  position: absolute;
+  height: 84px;
+  width: 84px;
+ }
+ .global_audience{
+  margin-left: -1000px;
+  margin-top: 150px;
+  height: 151px;
+  width: 300px;
+ }
+ .revenue{
+  margin-left: -300px;
+  margin-top: 400px;
+  height: 151px;
+  width: 300px;
+ }
+ .schedule{
+  margin-left: 400px;
+  margin-top: 400px;
+  height: 151px;
+  width: 300px;
+ }
+ .features{
+  /* top: 10px; */
+  font-family: "Lato", sans-serif; /* Font family */
+  font-size: 20px;
+  line-height: 24px;
+  color: #fafafa;
+ }
+ .features_desc{
+  font-family: "Lato", sans-serif; /* Font family */
+  line-height: 19.2px;
+  color: #d4d4d4;
+  font-size: 16px;
+ }
+ .features_heading{
+  height: 62px;
+  width: 351px;
+  text-align: center;
+  margin-top: -50px;
+  margin-left: 460px;
+  font-size: 16px;
+  font-family: "Lato", sans-serif; /* Font family */
+  color: #f5f5f5;
+ }
+ .key_features {
+  display: flex;
+  justify-content: space-evenly;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInContainer 1s ease-in-out forwards;
+}
+
+/* Container fade-in animation */
+@keyframes fadeInContainer {
+  0% {
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.fitness, .fitness1 {
+  width: 300px;
+  height: 300px;
+  border-radius: 16px; /* Smooth rounded corners */
+  object-fit: cover; /* Ensures proper scaling of the image */
+  transform: scale(0.9); /* Slightly smaller initially */
+  opacity: 0; /* Fully transparent */
+  animation: fadeInZoom 1s ease-in-out forwards;
+}
+
+/* Staggered animation for each image */
+.fitness:nth-child(1) {
+  animation-delay: 0.2s; /* Delays for 1st image */
+}
+.fitness:nth-child(2) {
+  animation-delay: 0.4s; /* Delays for 2nd image */
+}
+.fitness1:nth-child(3) {
+  animation-delay: 0.6s; /* Delays for 3rd image */
+}
+.fitness1:nth-child(4) {
+  animation-delay: 0.8s; /* Delays for 4th image */
+}
+
+/* Keyframe for individual fade-in and zoom effect */
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0; /* Fully transparent */
+    transform: scale(0.8); /* Slightly zoomed out */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Original size */
+  }
+}
+
+.fitness{
+  cursor: pointer;
+  height: 244px;
+  width: 240px;
+ }
+ .fitness1{
+  margin-top: 40px;
+  cursor: pointer;
+  height: 201px;
+  width: 240px;
+ }
+ .circle8{
+  height: 84px;
+  width: 84px;
+ }
+ #coach1{
+  font-family: "Lato", sans-serif; /* Font family */
+  font-size: 46px;
+  color: #f5f5f5;
+  text-align: center;
+ }
+ #color{
+  color: #db3327;
+ }
+ .tilt{
+  display: flex;
+  justify-content: center;
+  }
+ .iphone3{
+  height: 600px;
+  width: 440px;
+  background: transparent;
+ }
+.tilt1{
+  position: absolute;
+ margin-left: 100px;
+ transform: rotate(5deg); /* Tilted left */
+ background: transparent;
+}
+.tilt2{
+  position: relative;
+  /* margin-left: 1px; */
+  background: transparent;
+  transform: rotate(-10deg); /* Tilted left */
+}
+.buttons1{
+  margin-top: -40px;
+  width: 423px;
+  height: 61px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 420px;
+  gap: 25px;
+}
+.how-it-works-container{
+  height: 550px;
+  /* background: linear-gradient(126.89deg, rgba(219, 39, 119, 0.12) -67.19%, rgba(249, 115, 22, 0.12) 203.32%); */
+
+}
+.title{
+  background: linear-gradient(126.89deg, rgba(219, 39, 119, 0.12) -67.19%, rgba(249, 115, 22, 0.12) 203.32%);
+  text-align: center;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5f5f5;
+  font-size: 52px;
+  font-family: "Lato", sans-serif; /* Font family */
+}
+.timeline{
+  margin-left: 90px;
+  background: transparent;
+  
+  /* width: 100%; */
+}
+.timeing{
+  background: linear-gradient(126.89deg, rgba(219, 39, 119, 0.12) -67.19%, rgba(249, 115, 22, 0.12) 203.32%);
+}
+.timing_content{
+  background: linear-gradient(126.89deg, rgba(219, 39, 119, 0.12) -67.19%, rgba(249, 115, 22, 0.12) 203.32%);
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  /* margin-top: 10px; */
+}
+.single_content{
+  margin-top: 20px;
+  margin-left: 60px;
+  color: #d4d4d4;
+  background: transparent;
+  height: 120px;
+  width: 248px;
+}
+.coach1{
+  height: 154px;
+  width: 740px;
+  margin-left: 290px;
+}
+#heading1{
+  margin-left: 130px;
+  /* text-align: center; */
+  height: 62px;
+  /* width: 601px; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  font-family: "Lato", sans-serif; /* Font family */
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 62.4px;
+  color: #d4d4d4;
+}
+.coach_nam{
+  margin-left: 390px;
+  height: 399px;
+  width: 503px;
+  background: transparent;
+}
+.circle10{
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  margin-left: -590px;
+}
+
+.circle11{
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  margin-top: 140px;
+  margin-left: -740px;
+}
+.circle12{
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  margin-top: 300px;
+  margin-left: -590px;
+}
+.circle13{
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  /* margin-top: 140px; */
+  /* margin-left: -px; */
+}
+.circle14{
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  margin-top: 140px;
+  margin-left: 150px;
+}
